@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Aml_Notification_Service_Api</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="FunctionHandler\**" />
+    <Content Remove="FunctionHandler\**" />
+    <EmbeddedResource Remove="FunctionHandler\**" />
+    <None Remove="FunctionHandler\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aml.Notification.Service.Exceptions\Aml.Notification.Service.Exceptions.csproj" />
+    <ProjectReference Include="..\Aml.Notification.Service.Http\Aml.Notification.Service.Http.csproj" />
+    <ProjectReference Include="..\Aml.Notification.Service.Model\Aml.Notification.Service.Model.csproj" />
+    <ProjectReference Include="..\Aml.Notification.Service.Services\Aml.Notification.Service.Services.csproj" />
+  </ItemGroup>
+
+</Project>
